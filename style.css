@@ -41,7 +41,7 @@ header {
 }
 .header_lists ul {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -208,7 +208,7 @@ header {
 
 .main {
   width: 100%;
-  height: 100%;
+  height: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -216,7 +216,7 @@ header {
 
 .main-img {
   width: 100%;
-  height: 60%;
+  height: 70%;
   background-image: url("https://images.squarespace-cdn.com/content/v1/5d2c297bc3a621000146426b/1566805983477-4Y60SH2JMA4UPOEXAZMF/IMG_3238_2040.jpg?format=2500w");
   background-size: cover;
   display: flex;
@@ -294,7 +294,7 @@ header {
 }
 .about-box {
   width: 40%;
-  height: 80%;
+  height: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -308,7 +308,7 @@ header {
   justify-content: center;
   font-size: 30px;
 }
-.about .about-text {
+.about-text {
   width: 100%;
   height: 70%;
   font-size: 20px;
@@ -560,10 +560,12 @@ td {
 }
 .expert-img {
   width: 90%;
-  height: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.expert-img img {
+  height: 100%;
 }
 .expert-text {
   width: 100%;
@@ -688,14 +690,18 @@ td {
   margin-left: 18px;
   border: 2px solid rgb(244, 70, 7);
 }
-/* ---------------RESPONSIVE ----------------*/
 
-@media only screen and (max-width: 370px) {
+/* ---------------RESPONSIVE ----------------*/
+@media only screen and (max-width: 420px) {
+  .container {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 914px) {
   .header_logo {
-    font-size: 13px;
-    width: 60%;
-    text-indent: 10px;
-    justify-content: flex-start;
+    width: 50%;
+    font-size: 12px;
+    text-align: center;
   }
 }
 @media only screen and (max-width: 790px) {
@@ -724,9 +730,6 @@ td {
   .main-img {
     width: 100%;
   }
-}
-
-@media only screen and (max-width: 390px) {
   .schedule-title {
     font-size: 17px;
     margin-top: 10px;
@@ -734,8 +737,6 @@ td {
   .schedule-text {
     font-size: 15px;
   }
-}
-@media only screen and (max-width: 390px) {
   .week-days {
     width: 100%;
   }
@@ -743,10 +744,7 @@ td {
     width: 70%;
     font-size: 10px;
   }
-}
-
-@media only screen and (max-width: 390px) {
-  .aoubt {
+  .about {
     width: 100%;
   }
   .about-text {
@@ -765,17 +763,6 @@ td {
   .about-experts__text p {
     font-size: 18px;
   }
-}
-@media only screen and (max-width: 550px) {
-  .information button {
-    width: 150px;
-    height: 30px;
-    margin-top: 20px;
-    font-size: 15px;
-  }
-}
-
-@media only screen and (max-width: 390px) {
   .section {
     flex-direction: column;
   }
@@ -789,5 +776,59 @@ td {
   .section-right {
     width: 100%;
     margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .information button {
+    width: 150px;
+    height: 30px;
+    margin-top: 20px;
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 1245px) {
+  .header_lists {
+    display: none;
+  }
+  .about-experts,
+  .experts,
+  .experts .boxes {
+    height: auto;
+  }
+
+  .experts .boxes {
+    flex-direction: column;
+    width: 100%;
+  }
+  .experts .boxes .experts-box {
+    margin: 20px;
+  }
+}
+@media only screen and (max-width: 1096px) {
+  .experts .boxes .experts-box {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 475px) {
+  .experts .boxes .experts-box {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 1245px) {
+  .contact {
+    flex-direction: column;
+  }
+  .contact-message {
+    width: 90%;
+    margin-top: 20px;
+  }
+  .contact-message__box {
+    width: 500px;
+    background-size: cover;
+  }
+
+  .contact-map__box {
+    width: 90%;
   }
 }
